@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "jest",
+    "test-win": "yarn test -u",
+    "test:watch": "yarn test --watch",
+    "test:update": "yarn test -u",
+    "test:coverage": "yarn test --coverage",
+    "test:ci": "CI=true yarn test --bail --runInBand",
+    "test:ci-coverage": "CI=true yarn test --bail --runInBand --coverage",
+    "format": "prettier --write ./**/*.js"
+  },
+  "devDependencies": {
+    "jest": "23.6.0",
+    "prettier": "^2.6.2"
+  }
+}
