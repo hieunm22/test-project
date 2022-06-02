@@ -1,7 +1,7 @@
 const utils = {
-	generateRandomNumber: (range, random = undefined) => {
+	generateOTP: (length, random = undefined) => {
 		const rand = random === undefined ? Math.random() : random
-		return Math.round(rand * range).toString()
+		return Math.round(rand * Math.pow(10, length)).toString()
 	},
 	formatToday: (today = undefined) => {
 		const td = today === undefined ? new Date() : today
@@ -10,11 +10,7 @@ const utils = {
 		const yyyy = td.getFullYear()
 		return `${yyyy}-${mm}-${dd}`
 	},
-	generateGuid: (mockGuid = undefined) => {
-		if (mockGuid !== undefined) {
-			return mockGuid
-		}
-
+	generateGuid: () => {
 		// https://stackoverflow.com/questions/47230521/why-is-the-17th-digit-of-version-4-guids-limited-to-only-4-possibilities
 		return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
 			const r = (Math.random() * 16) | 0
