@@ -1,4 +1,3 @@
-import React from 'react'
 import { mount, configure } from 'enzyme'
 import Counter from './Counter'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
