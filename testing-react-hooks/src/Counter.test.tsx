@@ -2,7 +2,7 @@ import { mount, configure } from 'enzyme'
 import Counter from './Counter'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 
-configure({adapter: new Adapter()});
+configure({adapter: new Adapter()})
 
 describe('Counter Testing', () => {
   let wrapper
